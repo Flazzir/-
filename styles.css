@@ -52,8 +52,13 @@ section {
 }
 
 .dark-theme {
-    background-color: #333; /* Темний фон */
+    background-color: #333; /* Темний фон для body */
     color: #f9f9f9; /* Світлий текст */
+}
+
+.dark-theme section {
+    background-color: #444; /* Темний фон для секцій */
+    color: #f9f9f9; /* Світлий текст для секцій */
 }
 
 .gallery-grid {
@@ -122,18 +127,11 @@ footer {
 
 .close {
     position: absolute;
-    top: 30px;
-    right: 30px;
-    color: #fff;
+    top: 15px;
+    right: 35px;
+    color: white;
     font-size: 40px;
     font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
     cursor: pointer;
 }
 
