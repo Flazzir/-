@@ -65,6 +65,7 @@ section {
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .gallery-grid img:hover {
@@ -103,7 +104,7 @@ footer {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    max-width: 900px;
     animation: zoomIn 0.6s;
 }
 
