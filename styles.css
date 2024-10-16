@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f9f9f9;
     line-height: 1.6;
-    scroll-behavior: smooth; /* Додаємо плавний перехід для всієї сторінки */
+    scroll-behavior: smooth; /* Плавний перехід */
 }
 
 header {
@@ -79,7 +79,3 @@ footer {
     margin-top: 20px;
 }
 
-/* Анімація для плавного навігаційного прокручування */
-html {
-    scroll-behavior: smooth; /* Додаємо плавність прокручування для всього HTML документа */
-}
