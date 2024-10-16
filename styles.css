@@ -6,7 +6,6 @@ body {
     background-color: #f9f9f9;
     line-height: 1.6;
     scroll-behavior: smooth;
-    transition: background-color 0.5s, color 0.5s; /* Плавна зміна кольору */
 }
 
 header {
@@ -48,17 +47,6 @@ section {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.5s, color 0.5s; /* Плавна зміна кольору */
-}
-
-.dark-theme {
-    background-color: #333; /* Темний фон для body */
-    color: #f9f9f9; /* Світлий текст */
-}
-
-.dark-theme section {
-    background-color: #444; /* Темний фон для секцій */
-    color: #f9f9f9; /* Світлий текст для секцій */
 }
 
 .gallery-grid {
@@ -127,27 +115,17 @@ footer {
 
 .close {
     position: absolute;
-    top: 15px;
-    right: 35px;
-    color: white;
+    top: 30px;
+    right: 30px;
+    color: #fff;
     font-size: 40px;
     font-weight: bold;
-    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Стилі для кнопки теми */
-.theme-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #4CAF50;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.theme-toggle:hover {
-    background-color: #357a38;
 }
