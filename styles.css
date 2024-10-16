@@ -1,8 +1,11 @@
+/* Основні стилі */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Додаємо плавний перехід для всієї сторінки */
 }
 
 header {
@@ -10,6 +13,7 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -26,32 +30,56 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #357a38; /* Ефект при наведенні */
 }
 
 section {
-    padding: 20px;
+    padding: 40px;
     margin: 20px auto;
     max-width: 800px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: translateY(-10px); /* Ефект підйому при наведенні */
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+    gap: 15px;
 }
 
 .gallery-grid img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05); /* Збільшення зображення при наведенні */
 }
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Анімація для плавного навігаційного прокручування */
+html {
+    scroll-behavior: smooth; /* Додаємо плавність прокручування для всього HTML документа */
 }
