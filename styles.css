@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f9f9f9;
     line-height: 1.6;
-    scroll-behavior: smooth; /* Плавний перехід */
+    scroll-behavior: smooth;
 }
 
 header {
@@ -37,7 +37,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #357a38; /* Ефект при наведенні */
+    background-color: #357a38;
 }
 
 section {
@@ -47,17 +47,17 @@ section {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-section:hover {
-    transform: translateY(-10px); /* Ефект підйому при наведенні */
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
+}
+
+.gallery-grid figure {
+    margin: 0;
+    text-align: center;
 }
 
 .gallery-grid img {
@@ -68,7 +68,13 @@ section:hover {
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.05); /* Збільшення зображення при наведенні */
+    transform: scale(1.05);
+}
+
+.gallery-grid figcaption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
 }
 
 footer {
@@ -76,6 +82,49 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
 }
 
+/* Модальне вікно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px); /* Розмивання фону */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation: zoomIn 0.6s;
+}
+
+@keyframes zoomIn {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
